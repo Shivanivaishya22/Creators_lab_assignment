@@ -1,0 +1,22 @@
+{% extends "home.html"%}
+{% block body %}
+
+<form method="post" style="border:1px solid #ccc">
+    {% csrf_token %}
+  <div class="container">
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+    <label for="files"><b>Upload Files</b></label>
+    <input type="file" placeholder="Enter Username" name="files" required>
+
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Upload</button>
+    </div>
+  </div>
+</form>
+
+{% endblock %}
